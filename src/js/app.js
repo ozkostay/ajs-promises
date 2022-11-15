@@ -1,3 +1,6 @@
 import GameSavingLoader from './GameSavingLoader';
 
-console.log(GameSavingLoader.load());
+GameSavingLoader.load()
+  .then((respons) => {
+    console.log('=== Возвращаем объект: ', respons);
+  }, (error) => console.log(error));
